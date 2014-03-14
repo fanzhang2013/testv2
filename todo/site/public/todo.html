@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ToDo List</title>
+<meta name="viewport"
+content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="css/jquery.mobile.css" />
+<link rel="stylesheet" href="css/todo.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/todo.js"></script>
+<script src="js/iscroll.js"></script>
+</head> 
+<body> 
+<div id="main" data-role="page">
+  <div data-role="header" data-position="fixed">
+  <h1>Todo</h1>
+  <!-- <a id="add" data-icon="plus" class="ui-btn-right">Add</a> -->
+  <a href="#myPopup" data-icon="plus" data-rel="popup" data-transition="slide"  class="ui-btn-right ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Add</a>
+   
+ </div>
+ <div data-role="content">
+  <ul id="list" data-role="listview">
+   <li class="tm">
+    <span class="text">{{-text}}</span>
+   </li>
+  </ul>
+
+   <div data-role="main" class="ui-content">
+   <a href="">facebook</a>
+    <div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b" data-theme="a" style="min-width:250px;">
+     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <div>
+          <h3>Things need to be done</h3>
+          <label for="usrnm" class="ui-hidden-accessible">ToDo:</label>
+          <input id="new-todo" placeholder="To do thing" autofocus>
+          <!-- <label for="log">Add location info</label>
+          <input type="checkbox" name="login" id="log" value="1" data-mini="true"> -->
+          <a id="add" data-role="button" data-icon="check" data-inline="true" data-theme="b">Save</a>
+        </div> 
+    </div>
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
+</html>
